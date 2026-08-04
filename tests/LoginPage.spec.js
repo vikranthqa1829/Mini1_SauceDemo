@@ -10,7 +10,7 @@ for(const data of logindata){
 test(`Login Page validations: ${data.username}`,async({page})=>{
 
     const Loginpage=new LoginPage(page)
-    await Loginpage.goto()
+    await Loginpage.navigate()
     await Loginpage.loginfunction(data.username,data.password)
 
     if(data.shouldSucceed){

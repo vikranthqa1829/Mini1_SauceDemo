@@ -1,14 +1,15 @@
 //const BasePage = require("./BasePage")     // commoon JS method
 import {BasePage} from "./BasePage"          // ES6 method
 
-class LoginPage extends BasePage{
+export class LoginPage extends BasePage{
 constructor(page){
     super(page)
     this.usernametext = page.getByPlaceholder("Username")
     this.passwordtext = page.getByPlaceholder("Password")
     this.loginbtn = page.getByRole("button",{name:"Login"}) 
     this.errormsg = page.getByText("Epic sadface: Username is required")
-    this.pagetitle = page.getByText("Products",{exact:true})
+    //this.pagetitle = page.getByText("Products",{exact:true})
+    this.pagetitle = page.locator(".title")
 }
 
 async navigate(){
