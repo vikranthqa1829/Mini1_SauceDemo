@@ -1,0 +1,20 @@
+
+export const logindata=[
+{
+    username:"standard_user",
+    password:"secret_sauce",
+    shouldSucceed:true
+},
+{
+    username:"locked_out_user",
+    password:"secret_sauce",
+    shouldSucceed:false
+},
+{
+    username:"problem_user",
+    password:"secret_sauce",
+    shouldSucceed : true
+}
+]
+
+// module.exports= logindata // Common JS method
