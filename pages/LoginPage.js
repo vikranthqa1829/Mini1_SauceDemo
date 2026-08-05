@@ -4,12 +4,12 @@ import {BasePage} from "./BasePage"          // ES6 method
 export class LoginPage extends BasePage{
 constructor(page){
     super(page)
+    this.pagetitle = page.locator(".title")
     this.usernametext = page.getByPlaceholder("Username")
     this.passwordtext = page.getByPlaceholder("Password")
     this.loginbtn = page.getByRole("button",{name:"Login"}) 
     this.errormsg = page.getByText("Epic sadface: Username is required")
     //this.pagetitle = page.getByText("Products",{exact:true})
-    this.pagetitle = page.locator(".title")
 }
 
 async navigate(){
