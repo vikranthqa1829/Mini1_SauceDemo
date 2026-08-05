@@ -13,6 +13,7 @@ async verifyAddedProductcount(){
     await this.cartaddedprod.waitFor({state:"visible"})
     const prodcount = Number(await this.cartaddedprod.textContent())
     return prodcount
+    
 }
 
 }
