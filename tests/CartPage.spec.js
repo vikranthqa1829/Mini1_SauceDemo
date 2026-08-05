@@ -13,6 +13,6 @@ test("CartPageTC",async({page})=>{
     await loginpage.navigate()
     await loginpage.loginfunction(validlogin.username,validlogin.password)
     await inventorypage.clickAddToCart()
-    await cartpage.verifyAddedProductcount()
-
+    const count = await cartpage.verifyAddedProductcount()
+    await expect(count).toBeGreaterThan(0)
 })
