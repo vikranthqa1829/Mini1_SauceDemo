@@ -5,10 +5,10 @@ import { logindata } from "../LoginData/logindata"
 
 test("Inventory_page_validation",async({page})=>{
 
-    const inventorypage = new InventoryPage(page)
     const loginpage = new LoginPage(page)
-
+    const inventorypage = new InventoryPage(page)
     const validlogin = logindata[0]
+    
     await loginpage.navigate()
     await loginpage.loginfunction(validlogin.username,validlogin.password)
 

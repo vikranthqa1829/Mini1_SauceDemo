@@ -11,7 +11,8 @@ constructor(page){
 
 async verifyAddedProductcount(){
     await this.cartaddedprod.waitFor({state:"visible"})
-    return prodcount = Number(await this.cartaddedprod.textContent())
+    const prodcount = Number(await this.cartaddedprod.textContent())
+    return prodcount
 }
 
 }
